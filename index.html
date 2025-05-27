@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propagent - AI-Powered Proposal Automation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-deep-blue': '#0A0F1F',
+              'brand-light-blue': '#38BDF8', // sky-400
+              'brand-purple': '#8B5CF6',    // violet-500
+              'brand-pink': '#EC4899',      // pink-500
+              'brand-teal': '#2DD4BF',     // teal-400
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'subtle-pulse': 'subtlePulse 2s infinite ease-in-out',
+              'gradient-shift': 'gradientShift 15s ease infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              subtlePulse: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '.9' },
+              },
+              gradientShift: {
+                '0%, 100%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+              }
+            },
+            backgroundImage: {
+              'hero-gradient': 'linear-gradient(-45deg, #0A0F1F, #1E293B, #334155, #0A0F1F)',
+              'bubble-gradient': 'radial-gradient(circle at top right, rgba(56, 189, 248, 0.2), transparent 70%), radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.2), transparent 70%)',
+            },
+            backgroundSize: {
+              '400%': '400% 400%',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for a more modern look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0A0F1F; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #38BDF8;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #8B5CF6;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-deep-blue text-gray-200 font-sans antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+<link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
